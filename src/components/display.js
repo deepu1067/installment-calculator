@@ -7,6 +7,7 @@ import '../App.css';
 function Display({ formdata, isSubmitted }) {
     console.log(formdata)
     const [total, setTotal] = useState(0);
+    const [dis_max, setMaximum] = useState(0);
     const [installments, setInstallments] = useState({});
 
     useEffect(() => {
@@ -20,13 +21,17 @@ function Display({ formdata, isSubmitted }) {
         const waiver = formdata.waiver;
         const scholarship = formdata.scholarship;
         const fee = formdata.lateFine;
+        const maxium = Math.max(waiver, scholarship);
+        setMaximum(maxium);
 
         const discountCredit = (newCredit > 13) ? 13 : newCredit;
 
-        const discount = (discountCredit * 5000) * (Math.max(waiver, scholarship));
+        const discount = (discountCredit * 5000) * maxium;
         var totalAmount = (newCredit * 5000) - discount + (retakeCredit * 5000) + 5000 + fee;
         setTotal(totalAmount);
-        totalAmount = totalAmount - 15000;
+
+        if (maxium < 1)
+            totalAmount = totalAmount - 15000;
 
         const first = totalAmount * 0.4;
         const second = totalAmount * 0.3;
@@ -40,7 +45,9 @@ function Display({ formdata, isSubmitted }) {
             <h4 className='d-flex justify-content-center align-items-center gap-sm'><FontAwesomeIcon icon={faBangladeshiTakaSign} /> {total} <span className='gray'>(Discount: {installments.discount})</span></h4>
             <div className='mt-3 p-2 install-card'>
                 <h4 className='text-center mb-1'><FontAwesomeIcon icon={faMoneyBill1} /> Installments</h4>
-                <p className='text-center mb-3 gray'>After deducting pre-registration fee (150000)</p>
+                {
+                    (dis_max < 1) ? <p className='text-center mb-3 gray'>After deducting pre-registration fee (15000)</p> : null
+                }
 
                 <div className='row gx-1 p-2'>
                     <h6 className='col-2 text-center fw-bold'>SL</h6>
