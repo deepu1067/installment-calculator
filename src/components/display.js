@@ -19,14 +19,13 @@ function Display({ formdata, isSubmitted }) {
         const retakeCredit = formdata.retake;
         const waiver = formdata.waiver;
         const scholarship = formdata.scholarship;
-        const lateFine = formdata.lateFine;
+        const fee = formdata.lateFine;
 
-        const fee = lateFine ? 1000 : 0;
+        const discountCredit = (newCredit > 13) ? 13 : newCredit;
 
-        const discount = (newCredit * 5000) * (Math.max(waiver, scholarship));
+        const discount = (discountCredit * 5000) * (Math.max(waiver, scholarship));
         var totalAmount = (newCredit * 5000) - discount + (retakeCredit * 5000) + 5000 + fee;
         setTotal(totalAmount);
-
         totalAmount = totalAmount - 15000;
 
         const first = totalAmount * 0.4;
