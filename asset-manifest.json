@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/installment-calculator/static/css/main.785bda7f.css",
+    "main.js": "/installment-calculator/static/js/main.2b9d996f.js",
+    "static/js/453.0618a66a.chunk.js": "/installment-calculator/static/js/453.0618a66a.chunk.js",
+    "static/media/favicon.svg": "/installment-calculator/static/media/favicon.f43b44fc81e09b313bad25ec0414dc24.svg",
+    "index.html": "/installment-calculator/index.html",
+    "main.785bda7f.css.map": "/installment-calculator/static/css/main.785bda7f.css.map",
+    "main.2b9d996f.js.map": "/installment-calculator/static/js/main.2b9d996f.js.map",
+    "453.0618a66a.chunk.js.map": "/installment-calculator/static/js/453.0618a66a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.785bda7f.css",
+    "static/js/main.2b9d996f.js"
+  ]
+}
