@@ -1,0 +1,32 @@
+[
+    {
+        "program":"cse",
+        "trimester":true,
+        "last_data":["25-07-24", "16-07-24", "14-08-24"]
+    },
+    {
+        "program":"eee",
+        "trimester":true,
+        "last_data":["25-07-24", "16-07-24", "14-08-24"]
+    },
+    {
+        "program":"bsds",
+        "trimester":true,
+        "last_data":["25-07-24", "16-07-24", "14-08-24"]
+    },
+    {
+        "program":"bba",
+        "trimester":true,
+        "last_data":["25-07-24", "16-07-24", "14-08-24"]
+    },
+    {
+        "program":"ais",
+        "trimester":true,
+        "last_data":["25-07-24", "16-07-24", "14-08-24"]
+    },
+    {
+        "program":"bseco",
+        "trimester":true,
+        "last_data":["25-07-24", "16-07-24", "14-08-24"]
+    }
+]
