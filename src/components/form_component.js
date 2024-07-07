@@ -78,7 +78,7 @@ function Form({ handleformdata, setisSubmitted }) {
                 </div>
 
                 <div className='mt-3 d-xl-flex gap box-border col-xl-5 justify-content-between m-auto'>
-                    <h5><FontAwesomeIcon icon={faFileExcel} className='me-2' /> Late Fee</h5>
+                    <h5><FontAwesomeIcon icon={faFileExcel} className='me-2' />Late Registration</h5>
                     <div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="late_fine" id="yes" value="1000" onChange={(e) => setLateFine(Number(e.target.value))}></input>

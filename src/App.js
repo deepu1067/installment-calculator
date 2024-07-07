@@ -20,8 +20,6 @@ function App() {
         <Form handleformdata={handleformdata} setisSubmitted={setisSubmitted} />
         <div className='line'></div>
         {isSubmitted ? <Display formdata={formdata} isSubmitted={isSubmitted} /> : null}
-
-        {/* <Display formdata={formdata} isSubmitted={isSubmitted} /> */}
       </div>
     </main>
   );
