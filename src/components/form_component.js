@@ -22,12 +22,12 @@ function Form({ handleformdata, setisSubmitted }) {
         <form onSubmit={handleSubmit} className='container my-3'>
             <div className='row justify-content-between g-1'>
                 <div class="col-xl-5 form-floating mb-3 m-xl-0">
-                    <input type="number" class="form-control" id="newCredit" placeholder="New Credit" onChange={(e) => setCredit(Number(e.target.value))}></input>
+                    <input type="number" class="form-control" id="newCredit" placeholder="New Credit" autoComplete='off' onChange={(e) => setCredit(Number(e.target.value))}></input>
                     <label htmlFor="newCredit">New Credit</label>
                 </div>
 
                 <div class="col-xl-5 form-floating mb-3 m-xl-0">
-                    <input type="number" class="form-control" id="retakeCredit" placeholder="Retake Credit" onChange={(e) => setRetake(Number(e.target.value))}></input>
+                    <input type="number" class="form-control" id="retakeCredit" placeholder="Retake Credit" autoComplete='off' onChange={(e) => setRetake(Number(e.target.value))}></input>
                     <label htmlFor="retakeCredit">Retake Credit</label>
                 </div>
 
