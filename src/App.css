@@ -13,6 +13,10 @@ main {
   min-height: 100svh;
 }
 
+.height-content{
+  height: max-content;
+}
+
 main>div {
   background-color: #ffffff91;
   backdrop-filter: blur(50px);

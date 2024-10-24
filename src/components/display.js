@@ -20,13 +20,14 @@ function Display({ formdata, isSubmitted }) {
         const waiver = formdata.waiver;
         const scholarship = formdata.scholarship;
         const fee = formdata.lateFine;
+        const trimesterFee = formdata.trimesterFee;
         const maxium = Math.max(waiver, scholarship);
 
         const discountCredit = (newCredit > 13) ? 13 : newCredit;
-        const nonScholarshipDiscount = (newCredit > 13) ? (newCredit - 13) * 5000 * waiver : 0;
+        const nonScholarshipDiscount = (newCredit > 13) ? (newCredit - 13) * trimesterFee * waiver : 0;
 
-        const discount = (discountCredit * 5000) * maxium;
-        var totalAmount = (newCredit * 5000) - discount + (retakeCredit * 5000) - nonScholarshipDiscount + 5000 + fee;
+        const discount = (discountCredit * trimesterFee) * maxium;
+        var totalAmount = (newCredit * trimesterFee) - discount + (retakeCredit * trimesterFee) - nonScholarshipDiscount + trimesterFee + fee;
         setTotal(totalAmount);
 
         if (scholarship < 1)
